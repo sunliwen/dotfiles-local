@@ -3,6 +3,10 @@
 Based on thoughtbot/dotfiles, some useful but local dotfiles could be found in this repo.
 
 
-# Run
+# Install and Run
 
-`rcup` and done.
+`git clone git@github.com:sunliwen/dotfiles-local.git dotfiles-local`
+
+`rcup` 
+
+and done.
