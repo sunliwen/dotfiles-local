@@ -1,0 +1,18 @@
+# FIXME: Should be in the default PATH?
+export PATH=/usr/local/bin:$PATH
+
+export export LANG=zh_CN.UTF-8
+
+plugins=(git z sublime history)
+
+# Fix type with thefuck
+eval $(thefuck --alias)
+
+# ssh-agent to avoid passphase for ssh key
+ssh-agent &&
+ssh-add &&
+
+# For fun!
+fortune
+
+export PATH="$HOME/.bin:$PATH"
