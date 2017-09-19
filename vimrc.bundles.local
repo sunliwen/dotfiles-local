@@ -1,2 +1,14 @@
+" NERDTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" NERDCommenter
+Plug 'scrooloose/nerdcommenter'
+
+" Slumlord UML in Text
+" Refs: https://github.com/scrooloose/vim-slumlord
+Plug 'scrooloose/vim-slumlord'
+Plug 'aklt/plantuml-syntax'
+
+" Table
+Plug 'dhruvasagar/vim-table-mode'
