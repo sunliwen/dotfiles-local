@@ -8,11 +8,24 @@ plugins=(git z sublime history)
 # Fix type with thefuck
 eval $(thefuck --alias)
 
+
+# virtualenv and virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+
+# anaconda
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+
+export PATH="$HOME/.bin:$PATH"
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+source "$HOME/.asdf/asdf.sh"
+
 # ssh-agent to avoid passphase for ssh key
-ssh-agent &&
-ssh-add &&
+{
+  eval "$(ssh-agent -s)"
+} &> /dev/null
+
 
 # For fun!
 fortune
 
-export PATH="$HOME/.bin:$PATH"
