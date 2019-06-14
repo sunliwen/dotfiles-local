@@ -12,3 +12,10 @@ Plug 'aklt/plantuml-syntax'
 
 " Table
 Plug 'dhruvasagar/vim-table-mode'
+
+" Colorscheme solarized
+Plug 'altercation/vim-colors-solarized'
+
+" Shougo/dennite.nvim
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'

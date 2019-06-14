@@ -1,24 +1,37 @@
 # FIXME: Should be in the default PATH?
 export PATH=/usr/local/bin:$PATH
 
-export export LANG=zh_CN.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-plugins=(git z sublime history)
-
-# Fix type with thefuck
-eval $(thefuck --alias)
-
+plugins=(docker git z sublime vim history)
 
 # virtualenv and virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+#if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
+
+
 
 # anaconda
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+#export PATH=/usr/local/anaconda3/bin:"$PATH"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
 source "$HOME/.asdf/asdf.sh"
+source "$HOME/.asdf/completions/asdf.bash"
+
+# ansible
+export ANSIBLE_INVENTORY="$HOME/ansible/hosts"
+
+
+# docker completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# iterm tmux
+export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 
 # ssh-agent to avoid passphase for ssh key
 {
@@ -26,6 +39,22 @@ source "$HOME/.asdf/asdf.sh"
 } &> /dev/null
 
 
+# ASDF Rust Stable
+#source ~/.asdf/installs/rust/stable/env
+
+# yarn
+export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
+
+# reverse search
+# https://unix.stackexchange.com/questions/30168/how-to-enable-reverse-search-in-zsh
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # For fun!
+neofetch
 fortune
+
 
