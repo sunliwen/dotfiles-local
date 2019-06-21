@@ -23,7 +23,7 @@ source "$HOME/.asdf/asdf.sh"
 source "$HOME/.asdf/completions/asdf.bash"
 
 # ansible
-export ANSIBLE_INVENTORY="$HOME/ansible/hosts"
+export ANSIBLE_INVENTORY="$HOME/.ansible/hosts"
 
 
 # docker completion
