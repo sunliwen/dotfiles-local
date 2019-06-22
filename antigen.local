@@ -1,0 +1,74 @@
+[[ -f ~/.antigen.zsh ]] && source ~/.antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+
+# Bundles Pocoweb could use
+# Refs: https://github.com/zsh-users/antigen/wiki/Commands#antigen-bundles
+antigen bundles <<EOBUNDLES
+  ansible
+  # autoupdate antigen
+  # refs: https://github.com/unixorn/autoupdate-antigen.zshplugin<Paste>
+  unixorn/autoupdate-antigen.zshplugin
+
+  asdf
+  kiurchv/asdf.plugin.zsh
+  aws
+  brew
+  celery
+  command-not-found
+  Tarrasch/zsh-command-not-found
+  #dash
+  #docker
+  #docker-compose
+  git
+#  git-auto-fetch
+#  git-extras
+  iterm2 
+  pipenv
+  #kennethreitz/autoenv
+  # or optimized version
+  Tarrasch/zsh-autoenv
+  #postgres
+  #redis-cli
+  #sbt 
+  #scala 
+  # search
+  sunliwen/web-search
+  #themes 
+  #tmux
+  # auto start tmux
+  # https://github.com/zpm-zsh/tmux
+  zpm-zsh/tmux
+  #vagrant 
+  #z
+  skywind3000/z.lua
+  #sublime
+  #history
+  floor114/zsh-apple-touchbar
+
+  # The heroku tool helper plugin.
+  #heroku
+
+  # plugin-osx
+  # refs: https://github.com/mwilliammyers/plugin-osx
+  mkwmms/plugin-osx
+
+  # Syntax highlighting bundle.
+  zsh-users/zsh-syntax-highlighting
+
+EOBUNDLES
+
+# Load the theme.
+#antigen theme robbyrussell
+
+# Pure
+# Refs: https://github.com/sindresorhus/pure#install
+# Update your .zshrc file with the following two lines (order matters). Do not use the antigen theme function.
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
+# Tell Antigen that you're done.
+antigen apply

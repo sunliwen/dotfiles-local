@@ -1,3 +1,9 @@
+
+" EditorConfig
+" Refs: https://github.com/editorconfig/editorconfig-vim#readme
+Plug 'editorconfig/editorconfig-vim'
+
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -15,6 +21,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 " Colorscheme solarized
 Plug 'altercation/vim-colors-solarized'
+
+" Colorscheme snazzy
+Plug 'connorholyday/vim-snazzy'
 
 " Shougo/dennite.nvim
 if has('nvim')
