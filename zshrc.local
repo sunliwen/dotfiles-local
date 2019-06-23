@@ -48,10 +48,10 @@ export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin
 [[ -f ~/.antigen.local ]] && source ~/.antigen.local
 
 # ZSH Pure
-autoload -U promptinit; promptinit
+#autoload -U promptinit; promptinit
 #zmodload zsh/nearcolor
 #zstyle :prompt:pure:path color '#0052BF'
-prompt pure
+#prompt pure
 
 # For fun!
 #neofetch

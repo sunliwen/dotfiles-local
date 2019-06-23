@@ -3,11 +3,12 @@
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
+
 
 # Bundles Pocoweb could use
 # Refs: https://github.com/zsh-users/antigen/wiki/Commands#antigen-bundles
 antigen bundles <<EOBUNDLES
+  # Bundles from the default repo (robbyrussell's oh-my-zsh).
   ansible
   # autoupdate antigen
   # refs: https://github.com/unixorn/autoupdate-antigen.zshplugin<Paste>
@@ -19,6 +20,8 @@ antigen bundles <<EOBUNDLES
   brew
   celery
   command-not-found
+  zsh_reload
+
   Tarrasch/zsh-command-not-found
   #dash
   #docker
@@ -38,11 +41,8 @@ antigen bundles <<EOBUNDLES
   # search
   sunliwen/web-search
   #themes 
-  #tmux
-  # auto start tmux
-  # https://github.com/zpm-zsh/tmux
-  zpm-zsh/tmux
-  #vagrant 
+  tmux
+  vagrant 
   #z
   skywind3000/z.lua
   #sublime
@@ -55,6 +55,8 @@ antigen bundles <<EOBUNDLES
   # plugin-osx
   # refs: https://github.com/mwilliammyers/plugin-osx
   mkwmms/plugin-osx
+
+
 
   # Syntax highlighting bundle.
   zsh-users/zsh-syntax-highlighting
