@@ -1,6 +1,8 @@
+" Ansible
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
 " EditorConfig
-" Refs: https://github.com/editorconfig/editorconfig-vim#readme
+" Refs: https://github.com/editorconfig/editorconfig-vim"readme
 Plug 'editorconfig/editorconfig-vim'
 
 
@@ -19,8 +21,11 @@ Plug 'aklt/plantuml-syntax'
 " Table
 Plug 'dhruvasagar/vim-table-mode'
 
+" TOML
+Plug 'cespare/vim-toml'
+
 " Colorscheme solarized
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 
 " Colorscheme snazzy
 Plug 'connorholyday/vim-snazzy'
@@ -28,14 +33,13 @@ Plug 'connorholyday/vim-snazzy'
 " Shougo/dennite.nvim
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'Shougo/dennite.nvim'
+  Plug 'Shougo/denite.nvim'
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
-
 
 " Github like task lists
 "Plug 'vitalk/vim-simple-todo'

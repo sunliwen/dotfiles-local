@@ -40,6 +40,9 @@ HISTFILE=~/.zsh_history
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
+# pipenv
+PIPENV_DEFAULT_PYTHON_VERSION=3
+
 # yarn
 export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
 
