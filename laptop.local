@@ -14,10 +14,10 @@ install_asdf_language_version() {
   fi
 }
 
-fancy_echo "Installing Python 3.6 and latest"
-asdf install python 3.6
+fancy_echo "Installing Python 3.6.9 and latest"
+asdf install python 3.6.9
 asdf install python
-asdf global python 3.6
+asdf global python 3.6.9
 
 fancy_echo "Installing Pipenv ..."
 pip install --user pipenv
