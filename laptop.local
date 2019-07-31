@@ -1,4 +1,4 @@
-" vim:set ft=sh sw=2:
+# vim:set ft=sh sw=2:
 
 add_or_update_asdf_plugin "python"
 
