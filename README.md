@@ -1,6 +1,6 @@
 # dotfiles-local
 
-Based on thoughtbot/dotfiles, some useful but local dotfiles could be found in this repo.
+Based on https://github.com/thoughtbot/laptop and https://github.com/thoughtbot/dotfiles, some useful but local dotfiles could be found in this repo.
 
 
 # Install and Run
@@ -8,5 +8,9 @@ Based on thoughtbot/dotfiles, some useful but local dotfiles could be found in t
 `git clone git@github.com:sunliwen/dotfiles-local.git ~/dotfiles-local`
 
 `rcup` 
+
+# Todos
+
+- [ ] Make it one liner
 
 and done.
