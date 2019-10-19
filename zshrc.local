@@ -9,13 +9,16 @@ plugins=(ansible asdf aws brew celery command-not-found dash docker docker-compo
 git-auto-fetch git-extras iterm2 pipenv postgres redis-cli sbt scala themes tmux
 vagrant vscode z sublime history)
 
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
 source "$HOME/.asdf/asdf.sh"
 source "$HOME/.asdf/completions/asdf.bash"
 
 # ansible
 export ANSIBLE_INVENTORY="$HOME/.ansible/hosts"
+
+# homebrew ustc mirror
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # docker completion
 fpath=(~/.zsh/completion $fpath)
@@ -24,8 +27,16 @@ autoload -Uz compinit && compinit -i
 # Editor
 export EDITOR='nvim'
 
+# gitignore.io
+function gi() { 
+  curl -sLw n https://www.gitignore.io/api/$@ ;
+}
+
 # iterm tmux
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
+
+# JAVA 8
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # ssh-agent to avoid passphase for ssh key
 {
@@ -46,15 +57,21 @@ PIPENV_DEFAULT_PYTHON_VERSION=3
 # yarn
 export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
 
+export PATH="$PATH:$HOME/flutter/bin"
+
 # ZSH
 # Prefer to use antigen to manage plugins
 [[ -f ~/.antigen.local ]] && source ~/.antigen.local
+
+# User Config
+[[ -f ~/.user.local ]] && source ~/.user.local
 
 # ZSH Pure
 #autoload -U promptinit; promptinit
 #zmodload zsh/nearcolor
 #zstyle :prompt:pure:path color '#0052BF'
 #prompt pure
+
 
 # For fun!
 #neofetch

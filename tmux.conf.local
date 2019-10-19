@@ -19,3 +19,8 @@ bind-key a resize-pane -Z \; choose-tree "resize-pane -Z \; select-window -t '%%
 # :select-layout even-vertical
 #bind-key C-b M-1 select-layout even-horizontal
 #bind-key C-b M-2 select-layout even-vertical
+
+
+# increase scrollback lines
+set -g history-limit 50000
+
