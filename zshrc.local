@@ -43,14 +43,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
   eval "$(ssh-agent -s)"
 } &> /dev/null
 
-# reverse search
-# https://unix.stackexchange.com/questions/30168/how-to-enable-reverse-search-in-zsh
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-bindkey -v
-bindkey '^R' history-incremental-search-backward
-
 # pipenv
 PIPENV_DEFAULT_PYTHON_VERSION=3
 
@@ -59,13 +51,23 @@ export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin
 
 export PATH="$PATH:$HOME/flutter/bin"
 
-
 # ZSH
 # Prefer to use antigen to manage plugins
 [[ -f ~/.antigen.local ]] && source ~/.antigen.local
 
+# zsh reverse search
+# https://unix.stackexchange.com/questions/30168/how-to-enable-reverse-search-in-zsh
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # User Config
 [[ -f ~/.user.local ]] && source ~/.user.local
+
+# zaw
+[[ -f ~/.zawrc.local ]] && source ~/.zawrc.local
 
 # ZSH Pure
 #autoload -U promptinit; promptinit
