@@ -59,6 +59,7 @@ export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin
 
 export PATH="$PATH:$HOME/flutter/bin"
 
+
 # ZSH
 # Prefer to use antigen to manage plugins
 [[ -f ~/.antigen.local ]] && source ~/.antigen.local
