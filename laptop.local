@@ -22,6 +22,9 @@ asdf global python 3.6.9
 fancy_echo "Installing Pipenv ..."
 pip install --user pipenv
 
+fancy_echo "Installing Android SDK"
+brew cask install android-sdk
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 brew cask cleanup

@@ -5,20 +5,48 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # refs https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(ansible asdf aws brew celery command-not-found dash docker docker-compose git
-git-auto-fetch git-extras iterm2 pipenv postgres redis-cli sbt scala themes tmux
-vagrant vscode z sublime history)
+plugins=(
+	ansible
+	asdf
+	aws
+	brew
+	celery
+	command-not-found
+	dash
+	docker
+	docker-compose git
+	git-auto-fetch
+	git-extras
+	history
+	iterm2 
+	poetry
+	postgres
+	redis-cli
+	rust
+	sbt
+	scala
+	sublime
+	themes
+	tmux
+	vagrant
+	vscode
+	z
+	)
 
 export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+
+# Android SDK
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+
+
+# asdf
 source "$HOME/.asdf/asdf.sh"
 source "$HOME/.asdf/completions/asdf.bash"
 
 # ansible
 export ANSIBLE_INVENTORY="$HOME/.ansible/hosts"
-
-# homebrew ustc mirror
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # docker completion
 fpath=(~/.zsh/completion $fpath)
@@ -32,11 +60,31 @@ function gi() {
   curl -sLw n https://www.gitignore.io/api/$@ ;
 }
 
+# GO
+export GOPATH=$HOME/go # don't forget to change your path correctly!
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+# GOPROXY
+export GOPROXY=https://mirrors.aliyun.com/goproxy/
+
+# homebrew ustc mirror
+# Replace Homebrew Git with USTC mirrors
+# https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git
+#
+# Replace Bottle Domain with USTC mirrors
+# https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
 # iterm tmux
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 
 # JAVA 8
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# asdf rust
+export PATH=$PATH:`asdf where rust`/bin
 
 # ssh-agent to avoid passphase for ssh key
 {
